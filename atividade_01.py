@@ -38,3 +38,34 @@ raio = float(input("digite o raio do circulo: "))
 area = math.pi * raio ** 2
 
 print(f"A área do círculo com raio {raio} é {area:.2f}.")
+
+# questão 7 
+lado = float(input("digite o tamanho do quadrado: "))
+
+area = lado * lado
+area_dobro = 2* area
+
+print (f"o dobro do quatrado é {area_dobro}")
+
+# questão 8 
+valor1 = float(input("digite o valor que vc ganha por hora: "))
+valor2 = float(input("digite o valor de horas trabalhadas no mês: "))
+
+salario = valor1 * valor2
+
+print (f"seu salário por mês é R${salario:.2f}")
+
+# questão 9 
+gruas_f = float(input("digite a temperatura em Fahrenheit: "))
+
+gruas_c = 5 * ((gruas_f - 32) / 9)
+
+print (f"A temperatura em graus Celsius é {celsius:.2f}°C")
+
+# questão 10
+gruas_celsius = float(input("digite a temperatura em Celsius: "))
+
+gruas_Fahrenheit  = 5 * ((gruas_f - 9/5) + 32)
+
+print (f"A temperatura em graus Fahrenheit é {gruas_Fahrenheit:.2f}°C")
+ 
