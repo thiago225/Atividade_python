@@ -1,71 +1,39 @@
-import math
+import funcoes_atv01
 
-# questão 1
-print ("Alo mundo")
+def main():
+    while True:
+        print("\nEscolha a questão que deseja ver:")
+        print("1 - Questão 1")
+        print("2 - Questão 2")
+        print("3 - Questão 3")
+        print("4 - Questão 4")
+        print("5 - Questão 5")
+        print("6 - Questão 6")
+        print("7 - Questão 7")
+        print("8 - Questão 8")
+        print("9 - Questão 9")
+        print("10 - Questão 10")
+        print("11 - Questão 11")
+        print("12 - Questão 12")
+        print("13 - Questão 13")
+        print("14 - Questão 14")
+        print("15 - Questão 15")
+        print("16 - Questão 16")
+        print("17 - Questão 17")
+        print("18 - Questão 18")
+        escolha = input("Digite o número da questão que deseja ver (ou 'sair' para encerrar ó script): ")
 
-# questão 2
-numero = input("digite um número: ")
-print(f"seu numero é {numero}")
+        if escolha.lower() == 'sair':
+            break
 
-# questão 3
-primeiro_numero = float(input("digite o primeiro número: "))
-segunto_numero = float(input("digite o segunto  número: "))
+        try:
+            escolha = int(escolha)
+            if escolha < 1 or escolha > 18:
+                print("Opção inválida. Escolha um número de 1 a 18.")
+            else:
+                getattr(funcoes_atv01, f"questao{escolha}")()
+        except ValueError:
+            print("Opção inválida. Digite um número de 1 a 18.")
 
-soma = int(primeiro_numero) + int(segunto_numero)
-
-print(f"a soma dos número é: {soma}")
-
-# questão 4
-nota1 = float(input("digite sua primeira nota: "))
-nota2 = float(input("digite sua segunta nota: "))
-nota3 = float(input("digite sua terceira nota: "))
-nota4 = float(input("digite sua quarta nota: "))
-
-media = (nota1 + nota2 + nota3 + nota4) / 4
-
-print (f"sua media é: {media}")
-
-# questão 5 
-metros = float(input("digite a quantidade de metros: "))
-
-centimetros = metros * 100
-
-print (f"quantidade de metros é {metros} convertida para centimetros é {centimetros} ")
-
-# questão 6
-raio = float(input("digite o raio do circulo: "))
-
-area = math.pi * raio ** 2
-
-print(f"A área do círculo com raio {raio} é {area:.2f}.")
-
-# questão 7 
-lado = float(input("digite o tamanho do quadrado: "))
-
-area = lado * lado
-area_dobro = 2* area
-
-print (f"o dobro do quatrado é {area_dobro}")
-
-# questão 8 
-valor1 = float(input("digite o valor que vc ganha por hora: "))
-valor2 = float(input("digite o valor de horas trabalhadas no mês: "))
-
-salario = valor1 * valor2
-
-print (f"seu salário por mês é R${salario:.2f}")
-
-# questão 9 
-gruas_f = float(input("digite a temperatura em Fahrenheit: "))
-
-gruas_c = 5 * ((gruas_f - 32) / 9)
-
-print (f"A temperatura em graus Celsius é {celsius:.2f}°C")
-
-# questão 10
-gruas_celsius = float(input("digite a temperatura em Celsius: "))
-
-gruas_Fahrenheit  = 5 * ((gruas_f - 9/5) + 32)
-
-print (f"A temperatura em graus Fahrenheit é {gruas_Fahrenheit:.2f}°C")
- 
+if __name__ == "__main__":
+    main()
