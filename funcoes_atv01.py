@@ -1,6 +1,7 @@
 import math
 
 def questao1():
+    print("questão 1 - Faça um Programa que mostre a mensagem 'Alo mundo' na tela: \n")
     print("Alo mundo")
 
 def questao2():

@@ -22,6 +22,7 @@ def main():
         print("17 - Questão 17")
         print("18 - Questão 18")
         escolha = input("Digite o número da questão que deseja ver (ou 'sair' para encerrar ó script): ")
+        print("\n")
 
         if escolha.lower() == 'sair':
             break
